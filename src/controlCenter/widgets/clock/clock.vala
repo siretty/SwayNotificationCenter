@@ -30,8 +30,6 @@ namespace SwayNotificationCenter.Widgets {
             label_widget = new Gtk.Label (null);
             label_widget.set_text (text);
 
-            label_widget.set_halign(Gtk.Align.CENTER);
-
             label_widget.set_ellipsize (Pango.EllipsizeMode.END);
             label_widget.set_line_wrap (true);
             label_widget.set_lines (max_lines);
@@ -39,7 +37,7 @@ namespace SwayNotificationCenter.Widgets {
             // the monitors full width... GTK bug!...
             label_widget.set_max_width_chars (0);
             label_widget.set_line_wrap_mode (Pango.WrapMode.WORD_CHAR);
-            label_widget.set_justify (Gtk.Justification.LEFT);
+            label_widget.set_justify (Gtk.Justification.CENTER);
             label_widget.set_alignment (0, 0);
 
             pack_start (label_widget, true, true, 0);
