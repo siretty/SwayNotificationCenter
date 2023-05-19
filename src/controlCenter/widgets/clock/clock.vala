@@ -30,6 +30,8 @@ namespace SwayNotificationCenter.Widgets {
             label_widget = new Gtk.Label (null);
             label_widget.set_text (text);
 
+            label_widget.set_halign(Gtk.Align.CENTER);
+
             label_widget.set_ellipsize (Pango.EllipsizeMode.END);
             label_widget.set_line_wrap (true);
             label_widget.set_lines (max_lines);
