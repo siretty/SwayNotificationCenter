@@ -30,6 +30,8 @@ widget_sources = [
   'controlCenter/widgets/title/title.vala',
   # Widget: Dnd
   'controlCenter/widgets/dnd/dnd.vala',
+  # Widget: Clock
+  'controlCenter/widgets/clock/clock.vala',
   # Widget: Label
   'controlCenter/widgets/label/label.vala',
   # Widget: MPRIS

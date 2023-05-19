@@ -15,7 +15,7 @@ namespace SwayNotificationCenter.Widgets {
                 widget = new Dnd (suffix, swaync_daemon, noti_daemon);
                 break;
             case "clock":
-                widget = new Label (suffix, swaync_daemon, noti_daemon);
+                widget = new Clock (suffix, swaync_daemon, noti_daemon);
                 break;
             case "label":
                 widget = new Label (suffix, swaync_daemon, noti_daemon);

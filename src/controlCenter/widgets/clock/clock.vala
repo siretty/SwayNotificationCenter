@@ -2,7 +2,7 @@ namespace SwayNotificationCenter.Widgets {
     public class Clock : BaseWidget {
         public override string widget_name {
             get {
-                return "label";
+                return "clock";
             }
         }
 
@@ -12,14 +12,15 @@ namespace SwayNotificationCenter.Widgets {
         string text = "Label Text";
         int max_lines = 5;
 
-        public Label (string suffix, SwayncDaemon swaync_daemon, NotiDaemon noti_daemon) {
+        public Clock (string suffix, SwayncDaemon swaync_daemon, NotiDaemon noti_daemon) {
             base (suffix, swaync_daemon, noti_daemon);
 
             Json.Object ? config = get_config (this);
             if (config != null) {
                 // Get text
                 //string? text = get_prop<string> (config, "text");
-                string text = GLib.DateTime.format("%Y-%m-%d %H:%M");
+                var dt = new GLib.DateTime.now_local ();
+                string text = dt.format("%Y-%m-%d %H:%M");
                 if (text != null) this.text = text;
                 // Get max lines
                 int? max_lines = get_prop<int> (config, "max-lines");
